@@ -8,12 +8,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>Form Kartu Tanda Mahasiswa</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h2{
+                font-family: sans-serif;
+            }
+            .container{
+                border: 2px solid black;
+                text-align: center;
+                margin: auto;
+                width: 400px;
+                height: 300px;
+            }
+        </style>
     </head>
     <body>
-        <div>
+        <div class="container">
             <h2>Form Kartu Tanda Mahasiswa</h2>
-        </div>
-        <div>
             <form action="formktm">
                 <label>Nama Mahasiswa</label>
                 <input type="text" name="nama" id="nama" placeholder="Masukkan Nama">
@@ -30,7 +40,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <br/>
                 <input type="submit" value="Kirim" id="btn">
             </form>
-
         </div>
     </body>
 </html>
