@@ -26,6 +26,11 @@ public class ktmController {
             Model input
     ){
         
+        input.addAttribute("nama1",namaMhs);
+        input.addAttribute("nim1",nimMhs);
+        input.addAttribute("email1",emailMhs);
+        
+        
         return "viewpage";
     }
     
