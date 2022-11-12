@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ktmController {
     
-    @RequestMapping ("")
+    @RequestMapping ("/formktm")
     @ResponseBody
     
     public String formktm(){
