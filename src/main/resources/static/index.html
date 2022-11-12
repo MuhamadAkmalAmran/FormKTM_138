@@ -13,11 +13,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 font-family: sans-serif;
             }
             .container{
+                font-family: sans-serif;
                 border: 2px solid black;
-                text-align: center;
+                padding-left: 20px;
+                padding-right: 20px;
                 margin: auto;
-                width: 400px;
-                height: 300px;
+                width: 340px;
+                height: 400px;
+                background-color: #f2f2f2;
             }
         </style>
     </head>
@@ -26,18 +29,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <h2>Form Kartu Tanda Mahasiswa</h2>
             <form action="formktm">
                 <label>Nama Mahasiswa</label>
+                <br/>
                 <input type="text" name="nama" id="nama" placeholder="Masukkan Nama">
-                <br/><br>
+                <br/><br/>
                 <label>Nomor Induk Mahasiswa</label>
+                <br/>
                 <input type="text" name="nim" id="nim" placeholder="Masukkan NIM">                
                 <br/><br>
                 <label>Email Mahasiswa</label>
+                <br/>
                 <input type="email" name="email" id="email" placeholder="Masukkan Email">               
                 <br/><br>
                 <label>Program Studi</label>
+                <br/>
                 <input type="radio" name="ti" id="ti" value="S1 Teknologi Informasi">
                 <label>S1 Teknologi Informasi</label>
-                <br/>
+                <br/><br/>
                 <input type="submit" value="Kirim" id="btn">
             </form>
         </div>
