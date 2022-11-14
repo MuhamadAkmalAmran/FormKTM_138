@@ -27,7 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <div class="container">
             <h2>Form Kartu Tanda Mahasiswa</h2>
-            <form action="formktm" method="POST">
+            <form action="formktm" method="post" enctype="multipart/form-data">
                 <label>Nama Mahasiswa</label>
                 <br/>
                 <input type="text" name="nama" id="nama" placeholder="Masukkan Nama">
@@ -47,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <br/><br/>
                 <label>Pas Foto</label>
                 <br>
-                <input type="file" name="foto" id="foto" accept="image/png, image/jpeg" >
+                <input type="file" name="foto"  accept="image/png, image/jpeg" >
                 <br/><br/>
                 <input type="submit" value="Kirim" id="btn">
             </form>
