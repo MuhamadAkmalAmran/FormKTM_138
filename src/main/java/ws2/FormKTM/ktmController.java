@@ -17,18 +17,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ktmController {
     
-    @RequestMapping ("/formkt")
+    @RequestMapping ("/formktm")
     
     public String formktm(
             @RequestParam("nama")String namaMhs,
             @RequestParam("nim")String nimMhs,
             @RequestParam("email")String emailMhs,
+            @RequestParam("ti") String prodiMhs,
             Model input
     ){
         
         input.addAttribute("nama1",namaMhs);
         input.addAttribute("nim1",nimMhs);
         input.addAttribute("email1",emailMhs);
+        input.addAttribute("prodi",prodiMhs);
         
         
         return "viewpage";
