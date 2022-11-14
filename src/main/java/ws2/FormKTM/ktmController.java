@@ -4,11 +4,14 @@
  */
 package ws2.FormKTM;
 
+import java.io.IOException;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  *
@@ -16,25 +19,29 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class ktmController {
-    
-    @RequestMapping ("/formktm")
-    
+
+    @RequestMapping("/formktm")
+
     public String formktm(
-            @RequestParam("nama")String namaMhs,
-            @RequestParam("nim")String nimMhs,
-            @RequestParam("email")String emailMhs,
+            @RequestParam("nama") String namaMhs,
+            @RequestParam("nim") String nimMhs,
+            @RequestParam("email") String emailMhs,
+            @RequestParam("foto") MultipartFile fotoMhs,
             @RequestParam("ti") String prodiMhs,
             Model input
-    ){
-        
-        input.addAttribute("nama1",namaMhs);
-        input.addAttribute("nim1",nimMhs);
-        input.addAttribute("email1",emailMhs);
-        input.addAttribute("prodi",prodiMhs);
-        
-        
+    ) throws IOException 
+    
+    {
+        byte[] img = fotoMhs.getBytes();
+        String inputImg = Base64.encodeBase64String(img);
+        String LinkImg = "data:image/png;base64,".concat(inputImg);
+        input.addAttribute("nama1", namaMhs);
+        input.addAttribute("nim1", nimMhs);
+        input.addAttribute("email1", emailMhs);
+        input.addAttribute("prodi", prodiMhs);
+        input.addAttribute("foto1", LinkImg);
+
         return "viewpage";
     }
-    
-    
+
 }
