@@ -8,12 +8,47 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>Kartu Tanda Mahasiswa</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                margin: auto;
+                font-family: sans-serif;
+                border: 2px solid black;
+                margin: auto;
+                width: 400px;
+                height: 220px;
+            }
+            
+            .right{
+               text-align: right;
+               display: inline-block;
+               border: 2px solid black;
+               
+            }
+            
+            .left{
+                margin-top: 10px;
+                margin-left: 10px;
+                text-align: left;
+                display: inline-block;
+            }
+
+
+        </style>
     </head>
     <body>
-        <p th:text="${nama1}"></p>
-        <p th:text="${nim1}"></p>
-        <p th:text="${email1}"></p>
-        <p th:text="${prodi1}"></p>
-        <p> <img th:src="${foto1}" width="80px" height="120px" /></p>
+        <div class="container">
+            <div class="left">
+                <p th:text="${nama1}"></p>
+            <p th:text="${nim1}"></p>
+            <p th:text="${email1}"></p>
+            <p th:text="${prodi1}"></p>
+            </div>
+            
+            <div class="right">
+                <p > <img th:src="${foto1}" width="80px" height="120px" /></p>
+            </div>
+            
+        </div>
+
     </body>
 </html>
