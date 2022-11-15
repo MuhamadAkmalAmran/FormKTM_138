@@ -40,11 +40,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <br/>
                 <input type="email" name="email" id="email" placeholder="Masukkan Email">               
                 <br/><br>
-                <label>Program Studi</label>
-                <br/>
-                <input type="radio" name="ti" id="ti" value="S1 Teknologi Informasi">
-                <label>S1 Teknologi Informasi</label>
-                <br/><br/>
+                <label for="cars">Program Studi</label>
+                <select name="prodi" id="prodi" required>
+                    
+                    <option value="">Pilih Program Studi</option>
+                    <option value="S1 Teknologi Informasi">S1 Teknologi Informasi</option>
+                    <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
+                    <option value="S1 Teknik Sipil">S1 Teknik Sipil</option>
+                    <option value="S1 Teknik Mesin">S1 Teknik Mesin</option>
+                </select>
+                <!--                <label>Program Studi</label>
+                                <br/>
+                                <input type="radio" name="ti" id="ti" value="S1 Teknologi Informasi">
+                                <label>S1 Teknologi Informasi</label>
+-->                                <br/><br/>
                 <label>Pas Foto</label>
                 <br>
                 <input type="file" name="foto"  accept="image/png, image/jpeg" >

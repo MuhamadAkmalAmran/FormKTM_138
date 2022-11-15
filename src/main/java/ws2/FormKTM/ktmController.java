@@ -26,8 +26,7 @@ public class ktmController {
             @RequestParam("nim") String nimMhs,
             @RequestParam("email") String emailMhs,
             @RequestParam("foto") MultipartFile image,
-
-            @RequestParam("ti") String prodiMhs,
+            @RequestParam("prodi") String prodiMhs,
             Model input
     ) throws IOException 
     
@@ -38,7 +37,7 @@ public class ktmController {
         input.addAttribute("nama1", namaMhs);
         input.addAttribute("nim1", nimMhs);
         input.addAttribute("email1", emailMhs);
-        input.addAttribute("prodi", prodiMhs);
+        input.addAttribute("prodi1", prodiMhs);
         input.addAttribute("foto1", fotoMhs);
 
         return "viewpage";
