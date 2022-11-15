@@ -9,13 +9,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            body{
+                
+                text-align: center;
+                
+            }
             .container{
                 margin: auto;
                 font-family: sans-serif;
                 border: 2px solid black;
                 margin: auto;
+                margin-top: 100px;
                 width: 400px;
-                height: 220px;
+                height: 190px;
             }
             
             .right{
@@ -43,12 +49,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <p th:text="${email1}"></p>
             <p th:text="${prodi1}"></p>
             </div>
-            
             <div class="right">
                 <p > <img th:src="${foto1}" width="80px" height="120px" /></p>
             </div>
-            
         </div>
-
     </body>
 </html>
